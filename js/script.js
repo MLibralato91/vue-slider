@@ -43,7 +43,11 @@ createApp({
     }
   },
   methods: {
-
-
+    nextSlides() {
+      this.activeIndex--;
+    },
+    prevSlides() {
+      this.activeIndex++;
+    }
   }
 }).mount('#app')
