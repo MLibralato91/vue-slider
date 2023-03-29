@@ -49,26 +49,26 @@ createApp({
   },
   methods: {
     nextSlides() {
-      
+
       if (this.activeIndex === (this.slides.length - 1)) {
         this.activeIndex = 0;
-      }else{
+      } else {
         this.activeIndex++;
       }
 
     },
     prevSlides() {
-      
+
       if (this.activeIndex === 0) {
         this.activeIndex = this.slides.length - 1;
-      }else{
+      } else {
         this.activeIndex--;
       }
     },
-    currentSlides() {
-     this.index;
-     console.log(this.index);
-      
+    currentSlides(index) {
+      this.activeIndex = index;
+      console.log(this.index);
+
     }
   }
 }).mount('#app')
