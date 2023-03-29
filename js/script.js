@@ -44,10 +44,21 @@ createApp({
   },
   methods: {
     nextSlides() {
-      this.activeIndex--;
+      this.activeIndex++;
+      if (this.activeIndex === (slides.length - 1)) {
+        this.activeIndex = 0;
+      }else{
+        this.activeIndex++;
+      }
+
     },
     prevSlides() {
-      this.activeIndex++;
+      this.activeIndex--;
+      if (this.activeIndex === 0) {
+        this.activeIndex = slides.length - 1;
+      }else{
+        this.activeIndex--;
+      }
     }
   }
 }).mount('#app')
