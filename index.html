@@ -25,8 +25,8 @@
             </div>    
             </div>
             <div id="preview">
-                <div class="boxPreview" :class ="{'activeBox': activeIndex === index}" v-for="(slide, index) in slides">
-                    <img :src="slide.image" :alt="slide.title">
+                <div class="boxPreview"  :class ="{'activeBox': activeIndex === index}" v-for="(slide, index) in slides">
+                    <img @click="currentSlides" :src="slide.image" :alt="slide.title">
                 </div>
                 <button class="up" @click="prevSlides"><i class="fa-solid fa-circle-arrow-up"></i></button>
                 <button class="down" @click="nextSlides"><i class="fa-solid fa-circle-arrow-down"></i></button>

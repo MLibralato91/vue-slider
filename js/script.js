@@ -64,6 +64,11 @@ createApp({
       }else{
         this.activeIndex--;
       }
+    },
+    currentSlides() {
+     this.index;
+     console.log(this.index);
+      
     }
   }
 }).mount('#app')
